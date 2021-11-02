@@ -1,0 +1,13 @@
+D:\Repos\ExerciceFootCorrection\bin\Debug\netcoreapp3.1\ExerciceFootCorrection.exe
+D:\Repos\ExerciceFootCorrection\bin\Debug\netcoreapp3.1\ExerciceFootCorrection.deps.json
+D:\Repos\ExerciceFootCorrection\bin\Debug\netcoreapp3.1\ExerciceFootCorrection.runtimeconfig.json
+D:\Repos\ExerciceFootCorrection\bin\Debug\netcoreapp3.1\ExerciceFootCorrection.runtimeconfig.dev.json
+D:\Repos\ExerciceFootCorrection\bin\Debug\netcoreapp3.1\ExerciceFootCorrection.dll
+D:\Repos\ExerciceFootCorrection\bin\Debug\netcoreapp3.1\ExerciceFootCorrection.pdb
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.csprojAssemblyReference.cache
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.AssemblyInfoInputs.cache
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.AssemblyInfo.cs
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.csproj.CoreCompileInputs.cache
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.dll
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.pdb
+D:\Repos\ExerciceFootCorrection\obj\Debug\netcoreapp3.1\ExerciceFootCorrection.genruntimeconfig.cache
