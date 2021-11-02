@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\ExerciceFootCorrection\\ExerciceFootCorrection.csproj",
+      "projectUniqueName": "D:\\Repos\\FootCorrection\\ExerciceFootCorrection.csproj",
       "projectName": "ExerciceFootCorrection",
-      "projectPath": "D:\\Repos\\ExerciceFootCorrection\\ExerciceFootCorrection.csproj",
+      "projectPath": "D:\\Repos\\FootCorrection\\ExerciceFootCorrection.csproj",
       "packagesPath": "C:\\Users\\Adrien\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\ExerciceFootCorrection\\obj\\",
+      "outputPath": "D:\\Repos\\FootCorrection\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adrien\\AppData\\Roaming\\NuGet\\NuGet.Config",

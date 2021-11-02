@@ -6,19 +6,19 @@ namespace ExerciceFootCorrection
 {
     class Tournament
     {
-        private List<Team> competitingTeams;
-        private List<Team> disqualifiedTeams = new List<Team>();
-        private Team[] podium = new Team[3];
+        private List<AbstractTeam> competitingTeams;
+        private List<AbstractTeam> disqualifiedTeams = new List<AbstractTeam>();
+        private AbstractTeam[] podium = new AbstractTeam[3];
 
-        public Tournament(List<Team> teams)
+        public Tournament(List<AbstractTeam> teams)
         {
-            this.competitingTeams = new List<Team>(teams);
+            this.competitingTeams = new List<AbstractTeam>(teams);
         }
 
         public void RandomizeTeams()
         {
             Random random = new Random((int) DateTime.Now.Ticks);
-            competitingTeams = (List<Team>) ShuffleList(random, competitingTeams);
+            competitingTeams = (List<AbstractTeam>) ShuffleList(random, competitingTeams);
             Console.WriteLine("Tirage au sort");
             Program.printList(competitingTeams);
         }
@@ -39,7 +39,7 @@ namespace ExerciceFootCorrection
         void PlayThisRound()
         {
             //remove all previous disqualified teams from this round competiting teams
-            foreach(Team team in disqualifiedTeams)
+            foreach(AbstractTeam team in disqualifiedTeams)
             {
                 competitingTeams.Remove(team);
             }

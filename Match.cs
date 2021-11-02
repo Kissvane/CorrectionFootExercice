@@ -6,10 +6,10 @@ namespace ExerciceFootCorrection
 {
     class Match
     {
-        public Team team1;
-        public Team team2;
+        public AbstractTeam team1;
+        public AbstractTeam team2;
 
-        public Match(Team team1, Team team2)
+        public Match(AbstractTeam team1, AbstractTeam team2)
         {
             this.team1 = team1;
             this.team2 = team2;
@@ -17,8 +17,8 @@ namespace ExerciceFootCorrection
 
         public MatchResult playMatch()
         {
-            int score1 = team1.CalculateScore();
-            int score2 = team2.CalculateScore();
+            int score1 = team1.CalculateFinalScore(team2);
+            int score2 = team2.CalculateFinalScore(team1);
             if (score1 > score2) 
             {
                 //team1 win
@@ -37,28 +37,47 @@ namespace ExerciceFootCorrection
 
         public MatchResult playProlongation(int score)
         {
-            Random random = new Random(Program.NameToInt(team1.name+team2.name));
-            int tossCoin = random.Next(0,2);
-            if (tossCoin == 0)
+            if (team1.alwaysWinInProlongation && !team2.alwaysWinInProlongation)
             {
-                return new MatchResult(team1, team2, score+1, score, true);
+                return new MatchResult(team1, team2, score + 1, score, true);
+            }
+            else if (team2.alwaysWinInProlongation && !team1.alwaysWinInProlongation)
+            {
+                return new MatchResult(team2, team1, score + 1, score, true);
+            }
+            else if (team1.alwaysLooseInProlongation && !team2.alwaysLooseInProlongation)
+            {
+                return new MatchResult(team2, team1, score + 1, score, true);
+            }
+            else if (!team1.alwaysLooseInProlongation && team2.alwaysLooseInProlongation)
+            {
+                return new MatchResult(team1, team2, score + 1, score, true);
             }
             else
             {
-                return new MatchResult(team2, team1, score+1, score, true);
+                Random random = new Random(Program.NameToInt(team1.name + team2.name));
+                int tossCoin = random.Next(0, 2);
+                if (tossCoin == 0)
+                {
+                    return new MatchResult(team1, team2, score + 1, score, true);
+                }
+                else
+                {
+                    return new MatchResult(team2, team1, score + 1, score, true);
+                }
             }
         }
     }
 
     class MatchResult
     {
-        public Team winner;
-        public Team looser;
+        public AbstractTeam winner;
+        public AbstractTeam looser;
         public int scoreWinner;
         public int scoreLooser;
         public bool prolongation;
 
-        public MatchResult(Team winner, Team looser, int scoreWinner, int scoreLooser, bool prolongation)
+        public MatchResult(AbstractTeam winner, AbstractTeam looser, int scoreWinner, int scoreLooser, bool prolongation)
         {
             this.winner = winner;
             this.looser = looser;
